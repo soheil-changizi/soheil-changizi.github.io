@@ -13,7 +13,42 @@
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+			
+			.nav-left{
+				margin-top: 20px;
+			}
+			.nav-left .nav-list{
+				overflow-y: scroll;
+				height: 30vh;
+			}
+			/* width */
+			.nav-left .nav-list::-webkit-scrollbar {
+				width: 10px;
+			}
+			/* Track */
+			.nav-left .nav-list::-webkit-scrollbar-track {
+				background: #f1f1f1; 
+			}
+			/* Handle */
+			.nav-left .nav-list::-webkit-scrollbar-thumb {
+				background: rgba(186,104,200 ,1); 
+			}
+			/* Handle on hover */
+			.nav-left .nav-list::-webkit-scrollbar-thumb:hover {
+				background: #a7a7a7; 
+			}
+			
+			.hidden-row{
+				display: none;
+				opacity: 0;
+			}
+			
+			@media only screen and (min-width: 600px) and (max-width: 810px){
+				.nav-left h2{
+					font-size: 1.1em;
+				}
+			}
         </style>
 	</head>
     <body class="w3-gray">
@@ -22,51 +57,62 @@
 
             <!-- The Grid -->
             <div class="w3-row-padding">
-        
+    
+				<!-- Hidden Row -->
+				<div class="hidden-row w3-third">
+					<div class="w3-white w3-text-grey w3-card-4">
+						<div class="w3-display-container">
+							<img src="assets/about.jpg" style="width:100%" alt="Avatar">
+						</div>
+					</div>
+				</div>
+				
                 <!-- Left Column -->
-                <div class="w3-third">
+                <div class="w3-third nav-left">
           
-                <div class="w3-white w3-text-grey w3-card-4">
-                    <div class="w3-display-container">
-                        <img src="assets/about.jpg" style="width:100%" alt="Avatar">
-                        <div class="w3-display-bottomleft w3-container w3-text-black">
-                            <h2 style="background:gray; padding: 0px 5px 0px 5px">Soheil Changizi</h2>
-                        </div>
-                    </div>
-                    <div class="w3-container">
-                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-purple"></i>Computer Engineering Student</p>
-                        <p><i class="fa fa-university fa-fw w3-margin-right w3-large w3-text-purple"></i>K. N. Toosi University of Technology and Science</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i>Tehran, Iran</p>
-                        <hr>
-                        <ul style="list-style-type:none;">
-                            <nav>
-                                <li><a class="active" href="#home">About</a></li>
-                                <li><a href="#" data-nav-section="Education">Education</a></li>
-                                <li><a href="#" data-nav-section="Skills">Skills</a></li>
-                                <li><a href="#" data-nav-section="Experience">Experience</a></li>
-                                <li><a href="#" data-nav-section="Project">Project</a></li>
-                                <li><a href="#" data-nav-section="Contact">Contact</a></li>
-                            </nav>
-                        </ul>
-                    </div>
-                    <br>
-                </div>
+					<div class="w3-white w3-text-grey w3-card-4">
+						<div class="w3-display-container">
+							<img src="assets/about.jpg" style="width:100%;" alt="Avatar">
+							<div class="w3-display-bottomleft w3-container w3-text-black">
+								<h2 style="background: hsla(302, 100%, 17%, 0.85); color: #ededed; padding: 5px 6px 5px 6px; border-radius: 5px;">Soheil Changizi</h2>
+							</div>
+						</div>
+						<div class="w3-container nav-list">
+							<p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-purple"></i>Computer Engineering Student</p>
+							<p><i class="fa fa-university fa-fw w3-margin-right w3-large w3-text-purple"></i>K. N. Toosi University of Technology and Science</p>
+							<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i>Tehran, Iran</p>
+							<hr>
+							<ul style="list-style-type:none; padding-left: 1px !important;">
+								<nav>
+									<li><a class="active" href="#about">About</a></li>
+									<li><a href="#education" data-nav-section="Education">Education</a></li>
+									<li><a href="#skills" data-nav-section="Skills">Skills</a></li>
+									<li><a href="#experience" data-nav-section="Experience">Experience</a></li>
+									<li><a href="#projects" data-nav-section="Project">Project</a></li>
+									<li><a href="#contact" data-nav-section="Contact">Contact</a></li>
+								</nav>
+							</ul>
+						</div>
+						<br>
+					</div>
             
-                </div><br>
+                </div>
+				
+				<br />
                 <!-- End Left Column -->
                 
       
                 <!-- Right Column -->
                 <div class="w3-twothird">
           
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <div id="about" class="w3-container w3-card w3-white w3-margin-bottom">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-quote-left fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>About Me</h2>
                         <div class="w3-container">
                             <p>Computer Software Engeener Programming in Python and Java [in progress...]</p>
                         </div>
                 </div>
 
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <div id="education" class="w3-container w3-card w3-white w3-margin-bottom">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Education</h2>
                         <div class="w3-container">
                             <h5 class="w3-opacity"><b>K. N. Toosi University of Technology</b></h5>
@@ -75,7 +121,7 @@
                         </div>
                 </div>
 
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <div id="skills" class="w3-container w3-card w3-white w3-margin-bottom">
                         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Skills</h2>
                             <div class="w3-container">
                                     <p>Java</p>
@@ -100,28 +146,28 @@
                             </div>
                     </div>
 
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
-                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Experience</h2>
-                <div class="w3-container">
-                    <h5 class="w3-opacity"><b>Chief Operating Officer at Brilacasck</b></h5>
-                    <h6 class="w3-text-purple"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2017 - <span class="w3-tag w3-purple w3-round">Present</span></h6>
-                    <p>programming</p>
-                    <hr>
-                </div>
-                <div class="w3-container">
-                    <h5 class="w3-opacity"><b>Researcher at KN2C lab</b></h5>
-                    <h6 class="w3-text-purple"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2017 - Feb 2018</h6>
-                    <p>2D soccer simulation robocup</p>
-                    <hr>
-                </div>
-                <div class="w3-container">
-                    <h5 class="w3-opacity"><b>Participant at ACM/ICPC, Asia Region Programming Contest</b></h5>
-                    <h6 class="w3-text-purple"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Years 2016 and 2017</h6>
-                    <p>programming contest </p><br>
-                </div>
+                <div id="experience" class="w3-container w3-card w3-white w3-margin-bottom">
+					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Experience</h2>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Chief Operating Officer at Brilacasck</b></h5>
+						<h6 class="w3-text-purple"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2017 - <span class="w3-tag w3-purple w3-round">Present</span></h6>
+						<p>programming</p>
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Researcher at KN2C lab</b></h5>
+						<h6 class="w3-text-purple"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2017 - Feb 2018</h6>
+						<p>2D soccer simulation robocup</p>
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Participant at ACM/ICPC, Asia Region Programming Contest</b></h5>
+						<h6 class="w3-text-purple"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Years 2016 and 2017</h6>
+						<p>programming contest </p><br>
+					</div>
                 </div>
       
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <div id="projects" class="w3-container w3-card w3-white w3-margin-bottom">
                         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Projects</h2>
                         <div class="w3-container">
                             <h5 class="w3-opacity"><b>Year 4</b></h5>
@@ -164,7 +210,7 @@
                         </div>
                 </div>
 
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <div id="contact" class="w3-container w3-card w3-white w3-margin-bottom">
                         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-envelope-o fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Contact</h2>
                         <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-purple"></i>soheilchangizi1997@gmail.com</p>
                 </div>
@@ -186,6 +232,99 @@
                 <a href="https://github.com/cocolico14"><i class="fa fa-github w3-hover-opacity"></i></a>
                 <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         </footer>
+		
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous">
+		</script>
+		
+		<script>
+			
+			$(function(){
+			
+				function rescroller(){
+					if($(window).width() <= 600){
+						return;
+					}
+					var next_top = $(window).scrollTop();
+					var footer_top = $("footer").offset().top;
+					var window_h = $(window).height();
+					var nav_left_height = $(".nav-left").innerHeight();
+					
+					next_top = $(window).scrollTop();
+					if(next_top <= 36){
+						$(".hidden-row").css({display: "none"});
+						$(".nav-left").css({marginTop: "20px", position: "relative"});
+					}
+					if(next_top >= 36 && next_top + window_h < footer_top + 36){
+						$(".hidden-row").css({display: "block"});
+						$(".nav-left").css({top: 0, marginTop: 0, position: "fixed", width: $(".hidden-row").css("width")})
+					}
+					else if(next_top + window_h >= footer_top + 36) {
+						$(".hidden-row").css({display: "none"});
+						$(".nav-left").css({position: "relative", top: footer_top - nav_left_height - 36 - 10});
+						//$(".nav-left").offset({top: footer_top + nav_left_height})
+						console.log("eh", footer_top, nav_left_height, next_top);
+					}
+				}	
+				
+				function resizer(){
+					var window_w = $(window).width();
+					if(window_w <= 600){
+						$(".nav-left").css({position: "relative"});
+						$(".hidden-row").css({display: "none"});
+					}
+					else{
+						rescroller();
+						$(window).scroll(function(){
+							rescroller();
+						});
+						
+						var nav_img_height = $(".nav-left img").height() + 36;
+						console.log(nav_img_height);
+						$(".nav-left .nav-list").css({height: $(window).height() - nav_img_height - 50});
+						
+					}
+				}
+				
+				resizer();
+				
+				$(window).resize(function(){
+					resizer();
+				});
+			
+				$('a[href*="#"]')
+				  .not('[href="#"]')
+				  .not('[href="#0"]')
+				  .click(function(event) {
+					if (
+					  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+					  && 
+					  location.hostname == this.hostname
+					) 
+					{
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+						if (target.length) {
+						event.preventDefault();
+						$('html, body').animate({
+						  scrollTop: target.offset().top
+						}, 800, function() {
+							var $target = $(target);
+							$target.focus();
+							if ($target.is(":focus")) {
+								return false;
+							} else {
+								$target.attr('tabindex','-1');
+								$target.focus();
+							};
+						});
+					  }
+					}
+				});
+			});
+		</script>
         
     </body>
 </html>
