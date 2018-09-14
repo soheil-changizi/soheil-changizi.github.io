@@ -264,8 +264,6 @@
 					else if(next_top + window_h >= footer_top + 36) {
 						$(".hidden-row").css({display: "none"});
 						$(".nav-left").css({position: "relative", top: footer_top - nav_left_height - 36 - 10});
-						//$(".nav-left").offset({top: footer_top + nav_left_height})
-						console.log("eh", footer_top, nav_left_height, next_top);
 					}
 				}	
 				
@@ -282,7 +280,6 @@
 						});
 						
 						var nav_img_height = $(".nav-left img").height() + 36;
-						console.log(nav_img_height);
 						$(".nav-left .nav-list").css({height: $(window).height() - nav_img_height - 50});
 						
 					}
