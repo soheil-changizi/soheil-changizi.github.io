@@ -49,6 +49,15 @@
 					font-size: 1.1em;
 				}
 			}
+			@media only screen and (max-width: 600px) {
+				.nav-left{
+					margin-bottom: 15px;
+				}
+				.nav-left .nav-list{
+					overflow-y: auto;
+					height: 100%;
+				}
+			}
         </style>
 	</head>
     <body class="w3-gray">
@@ -72,7 +81,7 @@
           
 					<div class="w3-white w3-text-grey w3-card-4">
 						<div class="w3-display-container">
-							<img src="assets/about.jpg" style="width:100%;" alt="Avatar">
+							<img id="navLeftImg" src="assets/about.jpg" style="width:100%;" alt="Avatar">
 							<div class="w3-display-bottomleft w3-container w3-text-black">
 								<h2 style="background: hsla(302, 100%, 17%, 0.85); color: #ededed; padding: 5px 6px 5px 6px; border-radius: 5px;">Soheil Changizi</h2>
 							</div>
@@ -241,8 +250,7 @@
 		
 		<script>
 			
-			$(function(){
-			
+			$(function(){				
 				function rescroller(){
 					if($(window).width() <= 600){
 						return;
@@ -251,6 +259,7 @@
 					var footer_top = $("footer").offset().top;
 					var window_h = $(window).height();
 					var nav_left_height = $(".nav-left").innerHeight();
+					var nav_list = $(".nav-left .nav-list");
 					
 					next_top = $(window).scrollTop();
 					if(next_top <= 36){
@@ -265,6 +274,13 @@
 						$(".hidden-row").css({display: "none"});
 						$(".nav-left").css({position: "relative", top: footer_top - nav_left_height - 36 - 10});
 					}
+					
+					$("#navLeftImg").bind('mousewheel', function(e) {
+						if(Math.abs(e.originalEvent.deltaY) > 1){
+							nav_list.scrollTop((nav_list.scrollTop() + e.originalEvent.deltaY));
+						}
+						e.preventDefault();
+					}); 
 				}	
 				
 				function resizer(){
