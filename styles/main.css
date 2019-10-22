@@ -24,6 +24,19 @@ nav li a:hover:not(.active) {
     color: white;
 }
 
+.btnd {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btnd:hover {
+  background-color: RoyalPurple;
+}
+
 
 
 
