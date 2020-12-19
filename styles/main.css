@@ -37,6 +37,10 @@ nav li a:hover:not(.active) {
   background-color: RoyalPurple;
 }
 
-
+.cropLogo {
+    width: 500px;
+    height: 170px;
+    overflow: hidden;
+}
 
 
