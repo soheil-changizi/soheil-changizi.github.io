@@ -41,15 +41,16 @@
   <header id="header">
     <div class="container">
 
+      <h1><a href="index.html">Soheil Changizi</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <!-- <h2>I'm a passionate <span>Computer Scientist</span></h2> -->
+     
       <!-- ======= Hero Section ======= -->
-      <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-          <h1><a href="index.html">Soheil Changizi</a></h1>
-          <p>I'm a passionate <span class="typed" data-typed-items="Data Scientist, ML Engineer, Student"></span></p>
-        </div>
-      </section><!-- End Hero -->
+      <div class="hero-container" data-aos="fade-in">
+        <h2>I'm a passionate <span class="typed"></span></h2>
+      </div>
+      <!-- End Hero -->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -65,7 +66,7 @@
         <a href="https://www.linkedin.com/in/soheil-changizi-692725168/" class="linkedin"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/cocolico14" class="github"><i class="bi bi-github"></i></a>
         <a href="https://twitter.com/SoheilChangizi" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.kaggle.com/cocolicoq4" class="kaggle"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.kaggle.com/cocolicoq4" class="kaggle"><i class="fa-brands fa-kaggle"></i></a>
       </div>
 
     </div>
@@ -952,8 +953,21 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/dist/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://kit.fontawesome.com/d93fcddd05.js" crossorigin="anonymous"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('.typed', {
+      strings: ['Data Scientist', 'ML Engineer', 'Student'],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
